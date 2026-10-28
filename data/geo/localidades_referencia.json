@@ -1,0 +1,172 @@
+{
+  "cordoba|cordoba": {
+    "lat": -31.40648311,
+    "lng": -64.1885314,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?country=AR&q=C%C3%B3rdoba",
+    "localidad": "Cordoba",
+    "provincia": "Córdoba",
+    "registrosOrigen": 689
+  },
+  "alta gracia|cordoba": {
+    "lat": -31.64978446,
+    "lng": -64.42971659,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/advanced-search.html?q=cordoba&startRow=100",
+    "localidad": "Alta Gracia",
+    "provincia": "Córdoba",
+    "registrosOrigen": 46
+  },
+  "rio cuarto|cordoba": {
+    "lat": -33.13044368,
+    "lng": -64.35272316,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?country=AR&q=C%C3%B3rdoba",
+    "localidad": "Rio Cuarto",
+    "provincia": "Córdoba",
+    "registrosOrigen": 42
+  },
+  "mendoza|mendoza": {
+    "lat": -32.88946,
+    "lng": -68.84582,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/3844421",
+    "localidad": "Mendoza",
+    "provincia": "Mendoza",
+    "registrosOrigen": 26
+  },
+  "arroyito|cordoba": {
+    "lat": -31.41917294,
+    "lng": -63.05084455,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?country=AR&q=C%C3%B3rdoba&startRow=0",
+    "localidad": "Arroyito",
+    "provincia": "Córdoba",
+    "registrosOrigen": 18
+  },
+  "la calera|cordoba": {
+    "lat": -31.345823,
+    "lng": -64.338486,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/advanced-search.html?country=AR&featureClass=P&q=&startRow=400",
+    "localidad": "La Calera",
+    "provincia": "Córdoba",
+    "registrosOrigen": 15
+  },
+  "villa allende|cordoba": {
+    "lat": -31.293675,
+    "lng": -64.297697,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?country=AR&q=C%C3%B3rdoba",
+    "localidad": "Villa Allende",
+    "provincia": "Córdoba",
+    "registrosOrigen": 15
+  },
+  "godoy cruz|mendoza": {
+    "lat": -32.92533,
+    "lng": -68.84428,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/3854964/godoy-cruz.html",
+    "localidad": "Godoy Cruz",
+    "provincia": "Mendoza",
+    "registrosOrigen": 12
+  },
+  "unquillo|cordoba": {
+    "lat": -31.237168,
+    "lng": -64.311763,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?q=cordoba&startRow=50",
+    "localidad": "Unquillo",
+    "provincia": "Córdoba",
+    "registrosOrigen": 11
+  },
+  "villa del rosario|cordoba": {
+    "lat": -31.5541565,
+    "lng": -63.53562008,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?country=AR&q=C%C3%B3rdoba",
+    "localidad": "Villa Del Rosario",
+    "provincia": "Córdoba",
+    "registrosOrigen": 9
+  },
+  "villa maria|cordoba": {
+    "lat": -32.407514,
+    "lng": -63.240161,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?country=AR&q=C%C3%B3rdoba",
+    "localidad": "Villa Maria",
+    "provincia": "Córdoba",
+    "registrosOrigen": 8
+  },
+  "las heras|mendoza": {
+    "lat": -32.85094,
+    "lng": -68.83602,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/12594578/ciudad-de-las-heras.html",
+    "localidad": "Las Heras",
+    "provincia": "Mendoza",
+    "registrosOrigen": 7
+  },
+  "jesus maria|cordoba": {
+    "lat": -30.981528,
+    "lng": -64.094239,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?country=AR&q=C%C3%B3rdoba",
+    "localidad": "Jesus Maria",
+    "provincia": "Córdoba",
+    "registrosOrigen": 3
+  },
+  "villa nueva|cordoba": {
+    "lat": -32.43288808,
+    "lng": -63.24811159,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?country=AR&q=C%C3%B3rdoba",
+    "localidad": "Villa Nueva",
+    "provincia": "Córdoba",
+    "registrosOrigen": 2
+  },
+  "villa carlos paz|cordoba": {
+    "lat": -31.41830027,
+    "lng": -64.49008495,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/search.html?country=AR&q=C%C3%B3rdoba",
+    "localidad": "Villa Carlos Paz",
+    "provincia": "Córdoba",
+    "registrosOrigen": 2
+  },
+  "santiago del estero|santiago del estero": {
+    "lat": -27.80046944,
+    "lng": -64.26284749,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/advanced-search.html?country=AR&featureClass=P&q=&startRow=0",
+    "localidad": "Santiago Del Estero",
+    "provincia": "Santiago del Estero",
+    "registrosOrigen": 1
+  },
+  "la falda|cordoba": {
+    "lat": -31.09320531,
+    "lng": -64.48447759,
+    "precision": "localidad",
+    "fuente": "catalogo_geografico_importado",
+    "referencia": "https://www.geonames.org/advanced-search.html?q=cordoba",
+    "localidad": "La Falda",
+    "provincia": "Córdoba",
+    "registrosOrigen": 1
+  }
+}

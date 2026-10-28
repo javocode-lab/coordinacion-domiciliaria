@@ -34,8 +34,14 @@ test("errores operativos de Google no se cachean", async () => {
 
 test("paciente sin dirección encontrada cae a la localidad", async () => {
   let n = 0;
-  globalThis.fetch = async () => (++n === 1 ? respuestaVacia : respuestaOK(-31.0, -64.0, "APPROXIMATE"));
+
+  globalThis.fetch = async () =>
+    ++n === 1
+      ? respuestaVacia
+      : respuestaOK(-31.0, -64.0, "APPROXIMATE");
+
   const u = await ubicacionPaciente("PAC-0001");
+
   assert.equal(u.precision, "localidad");
-  assert.equal(u.lat, -31.0);
+  assert.equal(u.lat, -31.40648311);
 });
