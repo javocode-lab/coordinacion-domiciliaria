@@ -1,0 +1,83 @@
+/* ===== Componentes ===== */
+.estado { display: flex; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+
+fieldset {
+  margin: 0 0 var(--espacio);
+  padding: .75rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+legend { padding: 0 .35rem; font-weight: 600; }
+
+label { display: block; margin: .4rem 0 .15rem; font-size: .9rem; }
+
+input[type="search"], input[type="number"], select {
+  width: 100%;
+  padding: .45rem .5rem;
+  font: inherit;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  background: #fff;
+}
+select[size] { padding: .15rem; }
+select[size] option { padding: .3rem .4rem; border-radius: 4px; }
+
+:disabled { opacity: .55; cursor: not-allowed; }
+
+.lista-checks { margin: 0; padding: 0; list-style: none; }
+.lista-checks label { display: flex; gap: .5rem; align-items: center; margin: .2rem 0; }
+
+button {
+  padding: .5rem .9rem;
+  font: inherit;
+  color: #fff;
+  background: var(--color-primario);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover { background: var(--color-primario-oscuro); }
+button[type="reset"] { color: var(--color-texto); background: #e6ebf0; }
+
+.seleccion, .mapa, .sugerencias {
+  padding: var(--espacio);
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.ficha { margin-top: .75rem; padding-top: .5rem; border-top: 1px dashed var(--color-borde); }
+.ficha dl { display: grid; grid-template-columns: max-content 1fr; gap: .15rem .75rem; margin: 0; }
+.ficha dt { color: var(--color-texto-suave); }
+.ficha dd { margin: 0; }
+
+.mapa { display: flex; flex-direction: column; }
+.mapa__lienzo {
+  flex: 1;
+  min-height: 300px;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-texto-suave);
+  background: #e9eef3;
+  border-radius: 6px;
+}
+
+.sugerencias__lista { margin: 0; padding-left: 1.25rem; }
+
+/* Mapa */
+.mapa__lienzo { display: block; }
+.mapa__aviso {
+  margin: 0 0 .5rem;
+  padding: .5rem .75rem;
+  color: #7a2e00;
+  background: #fff3e0;
+  border: 1px solid #ffcc80;
+  border-radius: 6px;
+}
+.mapa__info { display: block; margin-top: .5rem; font-size: .9rem; color: var(--color-texto-suave); }
+
+/* S1.1: marcadores Leaflet con puntos ficticios */
+.mapa__lienzo { min-height: 340px; width: 100%; z-index: 0; }
+.marcador-demo { background: transparent; border: 0; }
+.marcador-demo span { display: block; width: 18px; height: 18px; border: 2px solid white; border-radius: 50%; box-shadow: 0 1px 5px #3338; }
