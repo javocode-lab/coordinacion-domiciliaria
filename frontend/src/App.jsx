@@ -84,7 +84,7 @@ export default function App() {
         profesionales={profesionalesMapa} candidatoSugeridoId={sugerencia.candidato?.id ?? null} profesionalId={profesionalId} onProfesional={setProfesionalId}
         cargando={estadoPaciente.cargando || centros.cargando}
         error={estadoPaciente.error || centros.error} puedeBuscar={puedeBuscar} />
-      <DetalleSeleccion paciente={paciente} profesional={profesional} profesiones={profesiones} />
+      <DetalleSeleccion paciente={paciente} profesional={profesional} profesiones={profesiones} servicioSeleccionado={filtros.profesion} />
     </main>
     <PiePagina />
   </>;

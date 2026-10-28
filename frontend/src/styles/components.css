@@ -148,3 +148,80 @@ button[type="reset"] { color: var(--color-texto); background: #e6ebf0; }
   .detalle-seleccion__grid { grid-template-columns: 1fr; gap: 1rem; }
   .detalle-seleccion .ficha + .ficha { border-left: 0; border-top: 1px solid var(--color-borde); padding-left: 0; padding-top: 1rem; }
 }
+
+/* S1.3 — Contacto WhatsApp en la ficha del profesional. */
+.detalle-seleccion__profesional { min-width: 0; }
+.detalle-seleccion__grid > .detalle-seleccion__profesional { border-left: 1px solid var(--color-borde); padding-left: 1.25rem; }
+.contacto-whatsapp { margin-top: 1rem; padding-top: .8rem; border-top: 1px solid var(--color-borde); }
+.contacto-whatsapp h4 { margin: 0 0 .25rem; }
+.contacto-whatsapp__ayuda { margin: .25rem 0 .7rem; font-size: .86rem; color: var(--color-texto-suave); }
+.contacto-whatsapp textarea { box-sizing: border-box; display: block; width: 100%; resize: vertical; padding: .6rem; border: 1px solid var(--color-borde); border-radius: 6px; font: inherit; }
+.contacto-whatsapp__boton { display: inline-flex; align-items: center; gap: .5rem; margin: .7rem 0; background: #167d48; }
+.contacto-whatsapp__boton:hover:not(:disabled) { background: #106237; }
+.contacto-whatsapp small { display: block; color: var(--color-texto-suave); }
+.contacto-whatsapp__advertencia { font-size: .85rem; color: #854d0e; background: #fff7df; padding: .5rem; border-radius: 5px; }
+@media (max-width: 1200px) { .detalle-seleccion__grid > .detalle-seleccion__profesional { border-left: 0; border-top: 1px solid var(--color-borde); padding-left: 0; padding-top: 1rem; } }
+
+/* S1.3-A — Fichas equilibradas: contexto | evaluación | contacto.
+   El contenedor decide cuántas columnas caben, no sólo el viewport. */
+.detalle-seleccion { min-width: 0; container-type: inline-size; }
+.detalle-seleccion__grid {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.15fr) minmax(0, 1.3fr);
+  gap: clamp(.8rem, 1.25vw, 1.5rem);
+  align-items: start;
+}
+.detalle-seleccion__grid > * { min-width: 0; }
+.detalle-seleccion__grid > .detalle-seleccion__profesional,
+.detalle-seleccion__grid > .detalle-seleccion__contacto {
+  border-left: 1px solid var(--color-borde);
+  border-top: 0;
+  padding: 0 0 0 clamp(.7rem, 1vw, 1.25rem);
+}
+.detalle-seleccion__contacto .contacto-whatsapp { margin: 0; padding: 0; border: 0; }
+.detalle-seleccion__contacto .contacto-whatsapp textarea { min-height: 110px; max-height: 260px; }
+.detalle-seleccion .ficha dl {
+  grid-template-columns: minmax(76px, max-content) minmax(0, 1fr);
+  gap: .2rem .6rem;
+}
+.detalle-seleccion .ficha dd,
+.detalle-seleccion .ficha dt { overflow-wrap: anywhere; }
+.mapa__lienzo { height: clamp(300px, 48dvh, 600px); }
+@container (max-width: 920px) {
+  .detalle-seleccion__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
+  .detalle-seleccion__grid > .detalle-seleccion__contacto {
+    grid-column: 1 / -1; border-left: 0; padding-left: 0;
+    border-top: 1px solid var(--color-borde); padding-top: .9rem;
+  }
+}
+@container (max-width: 570px) {
+  .detalle-seleccion__grid { grid-template-columns: minmax(0, 1fr); }
+  .detalle-seleccion__grid > .detalle-seleccion__profesional,
+  .detalle-seleccion__grid > .detalle-seleccion__contacto {
+    grid-column: auto; border-left: 0; padding-left: 0;
+    border-top: 1px solid var(--color-borde); padding-top: .9rem;
+  }
+}
+@media (max-width: 740px) {
+  .mapa__lienzo { height: clamp(290px, 42dvh, 480px); }
+}
+@media (max-height: 680px) and (min-width: 741px) {
+  .mapa__lienzo { height: clamp(265px, 44dvh, 400px); }
+}
+
+/* S1.3-B — Revisión explícita de teléfonos que requieren inferir el prefijo móvil. */
+.contacto-whatsapp input[type="tel"] { display: block; box-sizing: border-box; width: 100%; padding: .55rem; border: 1px solid var(--color-borde); border-radius: 6px; font: inherit; margin: .25rem 0 .5rem; }
+.contacto-whatsapp__confirmacion { display: flex; align-items: flex-start; gap: .45rem; font-size: .85rem; margin: .5rem 0; }
+.contacto-whatsapp__confirmacion input { margin-top: .15rem; }
+.contacto-whatsapp__destino { font-size: .85rem; overflow-wrap: anywhere; }
+
+/* S1.3-D: formulario de consulta operativa y acciones de contacto. */
+.contacto-whatsapp__formulario { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,195px),1fr)); gap:.7rem; margin:.7rem 0; }
+.contacto-whatsapp__formulario label, .contacto-whatsapp__clinico > label { display:flex; flex-direction:column; gap:.3rem; font-size:.85rem; }
+.contacto-whatsapp__formulario input, .contacto-whatsapp__formulario select { width:100%; min-width:0; box-sizing:border-box; padding:.55rem; border:1px solid var(--color-borde); border-radius:6px; font:inherit; }
+.contacto-whatsapp__clinico { margin:.8rem 0; }
+.contacto-whatsapp__clinico .contacto-whatsapp__confirmacion { flex-direction:row; align-items:flex-start; }
+.contacto-whatsapp__clinico textarea { margin:.4rem 0; }
+.contacto-whatsapp__acciones { display:flex; gap:.6rem; flex-wrap:wrap; margin:.5rem 0; }
+.contacto-whatsapp__estado { font-size:.82rem; min-height:1.1em; }
+.contacto-whatsapp button:disabled { opacity:.55; cursor:not-allowed; }
