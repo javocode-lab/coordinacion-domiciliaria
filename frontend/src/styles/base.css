@@ -1,0 +1,39 @@
+/* ===== Base: variables, reset y tipografía ===== */
+:root {
+  --color-fondo: #f4f6f8;
+  --color-superficie: #ffffff;
+  --color-borde: #d5dbe1;
+  --color-texto: #1d2733;
+  --color-texto-suave: #5b6876;
+  --color-primario: #0b5ea8;
+  --color-primario-oscuro: #08457b;
+  --radio: 8px;
+  --espacio: 1rem;
+  --fuente: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  line-height: 1.45;
+}
+
+h1, h2, h3 { margin: 0 0 .5rem; line-height: 1.2; }
+h2 { font-size: 1.1rem; }
+h3 { font-size: 1rem; }
+p { margin: 0; }
+small { color: var(--color-texto-suave); }
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

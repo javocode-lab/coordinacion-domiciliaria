@@ -1,0 +1,26 @@
+node_modules/
+dist/
+.env
+.env.local
+__pycache__/
+.DS_Store
+data/cache/
+
+# Datos privados de Coordinación
+/data/raw/
+/data/processed/
+/data/cache/
+
+# Credenciales y configuraciones locales
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Archivos locales y temporales
+*.sqlite
+*.sqlite3
+*.db
+*.log

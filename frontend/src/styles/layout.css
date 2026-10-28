@@ -1,0 +1,72 @@
+/* ===== Layout general: grid sobre los elementos semánticos ===== */
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "aside  main"
+    "footer footer";
+}
+
+.app-header  { grid-area: header; }
+.panel-filtros { grid-area: aside; }
+.app-main    { grid-area: main; }
+.app-footer  { grid-area: footer; }
+
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem 1.5rem;
+  padding: .75rem 1.25rem;
+  color: #fff;
+  background: var(--color-primario);
+}
+.app-header__titulo { font-size: 1.3rem; margin: 0; }
+.app-header__subtitulo { opacity: .85; flex: 1; }
+
+.panel-filtros {
+  padding: var(--espacio);
+  background: var(--color-superficie);
+  border-right: 1px solid var(--color-borde);
+  overflow-y: auto;
+}
+
+.app-main {
+  display: grid;
+  gap: var(--espacio);
+  padding: var(--espacio);
+  grid-template-columns: minmax(300px, 380px) 1fr;
+  grid-template-areas:
+    "seleccion mapa"
+    "seleccion sugerencias";
+  grid-template-rows: minmax(360px, 1fr) auto;
+}
+.seleccion    { grid-area: seleccion; }
+.mapa         { grid-area: mapa; }
+.sugerencias  { grid-area: sugerencias; }
+
+.app-footer {
+  padding: .6rem 1.25rem;
+  border-top: 1px solid var(--color-borde);
+  background: var(--color-superficie);
+}
+
+@media (max-width: 960px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "aside" "main" "footer";
+  }
+  .panel-filtros { border-right: 0; border-bottom: 1px solid var(--color-borde); }
+  .app-main {
+    grid-template-columns: 1fr;
+    grid-template-areas: "seleccion" "mapa" "sugerencias";
+    grid-template-rows: auto;
+  }
+}
+
+/* Punto de montaje de React: no genera caja propia para que header/aside/main/footer
+   sean hijos efectivos del grid del body. */
+app-root { display: contents; }

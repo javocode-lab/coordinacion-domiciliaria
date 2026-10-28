@@ -1,0 +1,13 @@
+{
+  "name": "coordinacion-domicilios",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Asignación de profesionales según domicilio del paciente (Node + React + Python ETL)",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "etl": "python scripts/etl/build_data.py",
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run dev -w frontend",
+    "build": "npm run build -w frontend"
+  }
+}
