@@ -70,3 +70,35 @@ body {
 /* Punto de montaje de React: no genera caja propia para que header/aside/main/footer
    sean hijos efectivos del grid del body. */
 app-root { display: contents; }
+
+/* S1.2-E: dos columnas; orientación dentro de selección, mapa sin fila intermedia. */
+@media (min-width: 961px) {
+  body { grid-template-columns: clamp(215px, 16vw, 260px) minmax(0, 1fr); }
+  .app-main {
+    align-content: start; align-items: start;
+    grid-template-columns: minmax(320px, 385px) minmax(0, 1fr);
+    grid-template-areas: "seleccion mapa";
+    grid-template-rows: auto;
+  }
+  .seleccion { grid-area: seleccion; min-width: 0; }
+  .mapa { grid-area: mapa; min-width: 0; }
+}
+@media (max-width: 960px) {
+  .app-main { grid-template-areas: "seleccion" "mapa"; grid-template-rows: auto; align-content: start; }
+}
+
+/* S1.2-F: ficha de paciente y profesional debajo del mapa. */
+@media (min-width: 961px) {
+  .app-main {
+    grid-template-areas:
+      "seleccion mapa"
+      "seleccion detalle";
+    grid-template-rows: auto auto;
+  }
+  .seleccion { align-self: start; }
+  .detalle-seleccion { grid-area: detalle; min-width: 0; }
+}
+@media (max-width: 960px) {
+  .app-main { grid-template-areas: "seleccion" "mapa" "detalle"; }
+  .detalle-seleccion { grid-area: detalle; min-width: 0; }
+}

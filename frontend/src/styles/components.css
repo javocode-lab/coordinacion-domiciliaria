@@ -81,3 +81,70 @@ button[type="reset"] { color: var(--color-texto); background: #e6ebf0; }
 .mapa__lienzo { min-height: 340px; width: 100%; z-index: 0; }
 .marcador-demo { background: transparent; border: 0; }
 .marcador-demo span { display: block; width: 18px; height: 18px; border: 2px solid white; border-radius: 50%; box-shadow: 0 1px 5px #3338; }
+
+/* S1.2: paginación y marcadores sincronizados */
+.paginador { display:flex; align-items:center; justify-content:space-between; gap:.4rem; margin:-.35rem 0 1rem; font-size:.82rem; }
+.paginador button { padding:.4rem .55rem; font-size:.82rem; }
+.marcador-localidad { background:transparent; border:0; }
+.marcador-localidad span { display:grid; place-items:center; width:28px; height:28px; border:2px solid #fff; border-radius:50%; color:#fff; font-size:.85rem; font-weight:700; box-shadow:0 2px 6px #0005; }
+
+/* S1.2-C: orientación no vinculante y leyenda del mapa */
+.candidato-informativo { padding:1rem; border:1px solid #d4bc70; border-radius:8px; background:#fff9e8; }
+.candidato-informativo h2 { margin-top:0; font-size:1.1rem; }
+.candidato-informativo p { margin:.4rem 0; }
+.candidato-informativo small { color:#625735; }
+.mapa__leyenda { display:flex; flex-wrap:wrap; gap:.5rem 1rem; font-size:.8rem; margin:.5rem 0 0; }
+
+/* S1.2-D — Tamaño controlado de mapa y lectura más clara de listas/fichas. */
+.mapa { min-width: 0; }
+.mapa__lienzo {
+  flex: none;
+  height: clamp(320px, 43vh, 490px);
+  min-height: 0;
+  width: 100%;
+}
+.mapa__aviso { font-size: .82rem; line-height: 1.35; }
+.seleccion { min-width: 0; }
+.seleccion .campo-lista { margin-bottom: .65rem; }
+.seleccion .campo-lista select[size] { height: 132px; }
+.seleccion .ficha { overflow-wrap: anywhere; }
+.seleccion .ficha dl { grid-template-columns: minmax(84px, 33%) minmax(0, 1fr); }
+.candidato-informativo { min-width: 0; }
+@media (max-width: 960px) {
+  .mapa__lienzo { height: clamp(300px, 42vh, 440px); }
+}
+
+/* S1.2-E: orientación compacta en el panel de selección y más mapa visible. */
+.seleccion .candidato-informativo {
+  padding: .65rem .75rem; margin: .5rem 0 .8rem;
+  background: #fffaf0; border-color: #d4bc70;
+}
+.seleccion .candidato-informativo h2 { font-size: .92rem; margin: 0 0 .3rem; }
+.seleccion .candidato-informativo p { font-size: .85rem; margin: .25rem 0; }
+.seleccion .candidato-informativo details { margin-top: .35rem; }
+.seleccion .candidato-informativo summary { cursor: pointer; font-size: .8rem; color: #624b14; }
+.seleccion .candidato-informativo small { display: block; margin-top: .25rem; font-size: .75rem; }
+@media (min-width: 961px) {
+  .mapa__lienzo { height: clamp(450px, 62vh, 660px); }
+}
+
+/* S1.2-F: fichas amplias sin duplicarlas en el selector. */
+.detalle-seleccion {
+  padding: var(--espacio);
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+.detalle-seleccion__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 1.25rem;
+}
+.detalle-seleccion .ficha { margin: 0; padding: 0; border: 0; min-width: 0; }
+.detalle-seleccion .ficha + .ficha { border-left: 1px solid var(--color-borde); padding-left: 1.25rem; }
+.detalle-seleccion .ficha dl { grid-template-columns: minmax(82px, max-content) minmax(0, 1fr); }
+.detalle-seleccion .ficha dd { overflow-wrap: anywhere; }
+@media (max-width: 1200px) {
+  .detalle-seleccion__grid { grid-template-columns: 1fr; gap: 1rem; }
+  .detalle-seleccion .ficha + .ficha { border-left: 0; border-top: 1px solid var(--color-borde); padding-left: 0; padding-top: 1rem; }
+}
